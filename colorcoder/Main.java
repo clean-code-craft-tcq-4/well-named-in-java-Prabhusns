@@ -9,7 +9,7 @@ public class Main {
 		ColorPairNumberTest.testPairToNumber(MajorColor.BLACK, MinorColor.ORANGE, 12);
 		ColorPairNumberTest.testPairToNumber(MajorColor.VIOLET, MinorColor.SLATE, 25);
 
-		ColorPairMapper.printReferenceManual();
+		ColorPairMapper.constructReferenceManual();
 	}
 
 }

@@ -1,5 +1,8 @@
 package colorcoder;
 
+import java.util.Arrays;
+import java.util.List;
+
 public enum MajorColor {
 	WHITE(0), RED(1), BLACK(2), YELLOW(3), VIOLET(4);
 
@@ -14,11 +17,7 @@ public enum MajorColor {
 	}
 
 	public static MajorColor fromIndex(int index) {
-		for (MajorColor color : MajorColor.values()) {
-			if (color.getIndex() == index) {
-				return color;
-			}
-		}
-		return null;
+		List<MajorColor> majorColorList = Arrays.asList(MajorColor.class.getEnumConstants());
+		return majorColorList.stream().filter(e -> e.getIndex() == index).findFirst().orElse(null);
 	}
 }

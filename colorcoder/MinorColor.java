@@ -1,5 +1,8 @@
 package colorcoder;
 
+import java.util.Arrays;
+import java.util.List;
+
 public enum MinorColor {
 	BLUE(0), ORANGE(1), GREEN(2), BROWN(3), SLATE(4);
 
@@ -14,11 +17,7 @@ public enum MinorColor {
 	}
 
 	public static MinorColor fromIndex(int index) {
-		for (MinorColor color : MinorColor.values()) {
-			if (color.getIndex() == index) {
-				return color;
-			}
-		}
-		return null;
+		List<MinorColor> MinorColorList = Arrays.asList(MinorColor.class.getEnumConstants());
+		return MinorColorList.stream().filter(e -> e.getIndex() == index).findFirst().orElse(null);
 	}
 }

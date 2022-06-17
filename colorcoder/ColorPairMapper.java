@@ -13,7 +13,7 @@ public class ColorPairMapper {
 		return major.getIndex() * Constants.numberOfMinorColors + minor.getIndex() + 1;
 	}
 
-	static void printReferenceManual() {
+	static void constructReferenceManual() {
 		System.out.println("Color Reference Manual");
 		System.out.println("---------------------------------------------");
 		System.out.printf("%2s %15s %15s", "Pair no.", "Major Color", "Minor Color");
